@@ -215,8 +215,8 @@ class PlayList {
            tempTrack = this.tracks[i];
            this.tracks[i] = this.tracks[minIndx];
            this.tracks[minIndx] = tempTrack;
-           System.out.println("sorted " + i);
-           System.out.println("min index  " + minIndx);
+           //System.out.println("sorted " + i);
+           //System.out.println("min index  " + minIndx);
         }
         // Uses the selection sort algorithm,  
         // calling the minIndex method in each iteration.

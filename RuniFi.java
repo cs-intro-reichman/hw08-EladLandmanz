@@ -60,7 +60,7 @@ class RuniFi {
 
         // Sorts the list 
         myList.sortedInPlace();
-        System.out.println("finished sorting");
+        //System.out.println("finished sorting");
         display("My list after sorting by increasing duration", myList);
     }
     
