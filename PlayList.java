@@ -63,6 +63,7 @@ class PlayList {
      public void removeLast() {
         //// replace this comment with your code
         if (size > 0){
+		// #feedback - there is no need to create another array, you can just reduce the size to remove the last track.
             Track[] newTracks = new Track[maxSize];
             for (int i=0; i < size; i++){
                 newTracks[i]=tracks[i];
@@ -86,8 +87,8 @@ class PlayList {
      *  If such a track is not found, returns -1. */
     public int indexOf(String title) {
         for (int i = 0; i<size; i++){
-            if (title.length() == tracks[i].getTitle().length()){
-                if (stringEqusls(title.toLowerCase(), tracks[i].getTitle().toLowerCase())){
+            if (title.length() == tracks[i].getTitle().length()){ // #feedback - you can just compare the strings instead of checking their length.
+                if (stringEqusls(title.toLowerCase(), tracks[i].getTitle().toLowerCase())){ // #feedback you can also use String's equals or ==
                     return i; 
                 }
             }
@@ -142,6 +143,7 @@ class PlayList {
     public void remove(String title) {
         if (size != 0 ){
             int removeIndx = indexOf(title);
+		// #feedback - you can call the remove method with index removeIndx.
             if (removeIndx != -1){
                 for (int j = removeIndx; j < size - 1; j++){
                     tracks[j] = tracks[j+1];
@@ -155,6 +157,7 @@ class PlayList {
 
     /** Removes the first track from this list. If the list is empty, does nothing. */
     public void removeFirst() {
+	    // #feedback - you can call the remove method with index 0.
         if (size != 0 ){
             for (int j = 0; j < size-1; j++){
                 tracks[j] = tracks[j+1];
